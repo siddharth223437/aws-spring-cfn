@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Creates ECR Repository"
+
+Parameters:
+  pRepositoryName:
+    Description: 'Create new Repository'
+    Type: String
+    Default: 'spring-aws-repository'
+
+Resources:
+  pRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: !Ref 'pRepositoryName'
